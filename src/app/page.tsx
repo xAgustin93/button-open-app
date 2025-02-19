@@ -6,6 +6,11 @@ export default function HomePage() {
     window.location.href = url;
   };
 
+  const openApp2 = () => {
+    const url = "com.fitxa";
+    window.location.href = url;
+  };
+
   const openAppStore = () => {
     const playStoreUrl =
       "https://play.google.com/store/apps/details?id=com.fitxa";
@@ -19,6 +24,12 @@ export default function HomePage() {
         style={{ backgroundColor: "red", padding: "20px" }}
       >
         Abrir App
+      </button>
+      <button
+        onClick={openApp2}
+        style={{ backgroundColor: "blue", padding: "20px" }}
+      >
+        Abrir App 2
       </button>
       <button
         onClick={openAppStore}
