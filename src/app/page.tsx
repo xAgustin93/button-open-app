@@ -1,8 +1,8 @@
-import React from "react";
+"use client";
 
 export default function HomePage() {
   const openApp = () => {
-    const url = "com.fitxa://"; // Reemplázalo con el esquema de la app
+    const url = "com.fitxa://";
     window.location.href = url;
   };
 
@@ -11,11 +11,21 @@ export default function HomePage() {
       "https://play.google.com/store/apps/details?id=com.fitxa";
     window.location.href = playStoreUrl;
   };
+
   return (
-    <div>
-      <h1>OPEN APP</h1>
-      <button onClick={openApp}>Abrir App</button>;
-      <button onClick={openAppStore}>Abrir App Store</button>;
+    <div style={{ display: "flex", flexDirection: "column", gap: "50px" }}>
+      <button
+        onClick={openApp}
+        style={{ backgroundColor: "red", padding: "20px" }}
+      >
+        Abrir App
+      </button>
+      <button
+        onClick={openAppStore}
+        style={{ backgroundColor: "green", padding: "20px" }}
+      >
+        Abrir App Store
+      </button>
     </div>
   );
 }
